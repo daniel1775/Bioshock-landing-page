@@ -1,0 +1,822 @@
+html{
+   scroll-behavior: smooth;
+}
+
+body{
+   box-sizing: 0;
+   margin: 0;
+   padding: 0;
+}
+
+h1, h2, h3, h4{
+   font-weight: normal;
+   font-family: 'Reem Kufi', sans-serif;
+}
+
+p{
+   font-family: 'Roboto', sans-serif;
+}
+
+.nav{
+   display: flex;
+   justify-content: space-between;
+   position: fixed;
+   width: 100%;
+   z-index: 9999;
+   background-color: white;
+}
+
+.nav__logo{
+   margin-top: 20px;
+   margin-bottom: 20px;
+   margin-left: 30px;
+}
+
+.nav__logo--movil{
+   display: none;
+}
+
+.nav__logo--hamb>.fa-bars {
+   display: none;
+}
+
+.nav__opciones{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   text-decoration: none;
+   list-style: none;
+}
+
+.nav__titulo a{
+   margin-right: 50px;
+   text-decoration: none;
+   color: black;
+   font-size: 20px;
+   font-family: 'Reem Kufi', sans-serif;
+}
+
+.nav__titulo:hover a{
+   border-bottom: 1px solid black;
+}
+
+.nav__activo{
+   border-bottom: 1px solid black;
+}
+
+.banner__fondo{
+   position: relative;
+}
+
+.banner__degradado{
+   position: absolute;
+   width: 100%;
+   height: 25%;
+   bottom: 0;
+   background: linear-gradient(to top, #061D2E 20%, #061d2e00);
+}
+
+.banner__imagen{
+   width: 100%;
+   height: 100%;
+}
+
+.banner__imagen--movil{
+   display: none;
+}
+
+.banner__titulo{
+   margin: 0;
+   padding-top: 40px;
+   padding-bottom: 50px;
+   text-align: center;
+   font-size: 50px;
+   color: white;
+   background-color: #061D2E;
+}
+
+.banner__texto{
+   margin-top: 0;
+   margin-bottom: 0;
+   padding-top: 5%;
+   padding-bottom: 12%;
+   padding-right: 8%;
+   padding-left: 8%;
+   text-align: center;
+   font-size: 30px;
+   color: white;
+   background-color: #061D2E;
+}
+
+#historia{
+   position: relative;
+}
+
+.historia__contenedor{
+   display: flex;
+   justify-content: space-around;
+   position: relative;
+   z-index: 2;
+   margin-bottom: 7%;
+}
+
+.historia__degradado{
+   width: 100%;
+   height: 15%;
+   background-color: #061D2E;
+   position: absolute;
+   z-index: 1;
+}
+
+.historia__icono{
+   width: 150px;
+   height: 150px;
+}
+
+.historia__titulo{
+   font-weight: bolder;
+   font-size: 22px;
+}
+
+.historia__seccion{
+   display: flex;
+   width: 25%;
+   flex-direction: column;
+   align-items: center;
+}
+
+.historia__texto{
+   font-size: 28px;
+   text-align: center;
+}
+
+.mosaico__cont1{
+   display: flex;
+}
+
+.mosaico__cont1--seccion1{
+   display: flex;
+   flex-direction: column;
+   margin-right: 5px;
+}
+
+.mosaico__cont1--seccion2{
+   display: flex;
+   flex-direction: column;
+}
+
+/* Hover Politica */
+
+.mosaico__imagen--politica{
+   width: 100%;
+}
+
+.politica__cont{
+   position: relative;
+}
+
+.politica__info{
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   color: white;
+   width: 100%;
+   height: 100%;
+}
+
+.politica__titulo{
+   position: absolute;
+   font-size: 1.5em;
+   margin-left: -75px;
+   transition: margin-left 0.3s;
+   font-size: 40px;
+}
+
+.politica__texto{
+   position: absolute;
+   font-size: 30px;
+   top: 2.6em;
+   width: 90%;
+   left: 1.5em;
+   margin-top: 5em;
+   transition: margin-top 0.4s;
+}
+
+.mosaico__imagen--politica{
+   position: relative;
+}
+
+.politica__cont:hover .politica__info{
+   opacity: 1;
+}
+
+.politica__cont:hover .politica__titulo{
+   margin-left: 1em;
+}
+
+.politica__cont:hover .politica__texto{
+   margin-top: 1em;
+}
+
+.politica__cont:hover .mosaico__imagen--politica{
+   transition:all .5s ease-in-out;
+   filter: grayscale(100%) blur(3px);
+}
+
+/*Hover Vinculos*/
+
+.mosaico__imagen--vinculos{
+   width: 100%;
+}
+
+.vinculos__cont{
+   position: relative;
+}
+
+.vinculos__info{
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   color: white;
+   font-size: 20px;
+   width: 100%;
+   height: 100%;
+}
+
+.vinculos__titulo{
+   position: absolute;
+   font-size: 1.5em;
+   margin-left: -75px;
+   transition: margin-left 0.3s;
+   font-size: 40px;
+}
+
+.vinculos__texto{
+   position: absolute;
+   font-size: 30px;
+   width: 90%;
+   top: 2.6em;
+   left: 1.5em;
+   margin-top: 5em;
+   transition: margin-top 0.4s;
+}
+
+.mosaico__imagen--vinculos{
+   position: relative;
+}
+
+.vinculos__cont:hover .vinculos__info{
+   opacity: 1;
+}
+
+.vinculos__cont:hover .vinculos__titulo{
+   margin-left: 1em;
+}
+
+.vinculos__cont:hover .vinculos__texto{
+   margin-top: 1em;
+}
+
+.vinculos__cont:hover .mosaico__imagen--vinculos{
+   transition:all .5s ease-in-out;
+   filter: grayscale(100%) blur(3px);
+}
+
+.mosaico__imagen--vinculos:hover{
+   transition:all .5s ease-in-out;
+   filter: grayscale(100%) blur(3px);
+}
+
+/**/
+
+/* Hover Habitantes */
+
+.mosaico__imagen--habitantes{
+   width: 100%;
+}
+
+.habitantes__cont{
+   position: relative;
+}
+
+.habitantes__info{
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   color: white;
+   font-size: 20px;
+   width: 100%;
+   height: 100%;
+}
+
+.habitantes__titulo{
+   position: absolute;
+   font-size: 1.5em;
+   margin-left: -75px;
+   width: 90%;
+   transition: margin-left 0.3s;
+   font-size: 40px;
+}
+
+.habitantes__texto{
+   position: absolute;
+   font-size: 30px;
+   width: 90%;
+   top: 2.6em;
+   left: 1.5em;
+   margin-top: 5em;
+   transition: margin-top 0.4s;
+}
+
+.mosaico__imagen--habitantes{
+   position: relative;
+}
+
+.habitantes__cont:hover .habitantes__info{
+   opacity: 1;
+}
+
+.habitantes__cont:hover .habitantes__titulo{
+   margin-left: 1em;
+}
+
+.habitantes__cont:hover .habitantes__texto{
+   margin-top: 1em;
+}
+
+.habitantes__cont:hover .mosaico__imagen--habitantes{
+   transition:all .5s ease-in-out;
+   filter: grayscale(100%) blur(3px);
+}
+
+.mosaico__imagen--habitantes:hover{
+   transition:all .5s ease-in-out;
+   filter: grayscale(100%) blur(3px);
+}
+
+/**/
+
+/* Hover Power*/
+
+.mosaico__imagen--power{
+   width: 100%;
+}
+
+.power__cont{
+   position: relative;
+}
+
+.power__info{
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   color: white;
+   font-size: 20px;
+   width: 100%;
+   height: 100%;
+}
+
+.power__titulo{
+   position: absolute;
+   font-size: 1.5em;
+   margin-left: -75px;
+   transition: margin-left 0.3s;
+   font-size: 40px;
+}
+
+.power__texto{
+   position: absolute;
+   font-size: 30px;
+   top: 2.6em;
+   left: 1.5em;
+   margin-top: 5em;
+   transition: margin-top 0.4s;
+}
+
+.mosaico__imagen--power{
+   position: relative;
+}
+
+.power__cont:hover .power__info{
+   opacity: 1;
+}
+
+.power__cont:hover .power__titulo{
+   margin-left: 1em;
+}
+
+.power__cont:hover .power__texto{
+   margin-top: 1em;
+}
+
+.power__cont:hover .mosaico__imagen--power{
+   transition:all .5s ease-in-out;
+   filter: grayscale(100%) blur(3px);
+}
+
+.mosaico__imagen--power:hover{
+   transition:all .5s ease-in-out;
+   filter: grayscale(65%) blur(3px);
+}
+
+/**/
+
+/*Hover Estetica*/
+
+.mosaico__imagen--estetica{
+   width: 100%;
+}
+
+.estetica__cont{
+   position: relative;
+}
+
+.estetica__info{
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   color: white;
+   font-size: 20px;
+   width: 100%;
+   height: 100%;
+}
+
+.estetica__titulo{
+   position: absolute;
+   font-size: 1.5em;
+   margin-left: -75px;
+   top: 2em;
+   transition: margin-left 0.3s;
+   font-size: 40px;
+}
+
+.estetica__texto{
+   position: absolute;
+   font-size: 30px;
+   top: 5.6em;
+   left: 1.5em;
+   width: 70%;
+   margin-top: 5em;
+   transition: margin-top 0.4s;
+}
+
+.mosaico__imagen--estetica{
+   position: relative;
+}
+
+.estetica__cont:hover .estetica__info{
+   opacity: 1;
+}
+
+.estetica__cont:hover .estetica__titulo{
+   margin-left: 1em;
+}
+
+.estetica__cont:hover .estetica__texto{
+   margin-top: 1em;
+}
+
+.estetica__cont:hover .mosaico__imagen--estetica{
+   transition:all .5s ease-in-out;
+   filter: grayscale(100%) blur(3px);
+}
+
+.mosaico__imagen--estetica:hover{
+   transition:all .5s ease-in-out;
+   filter: grayscale(65%) blur(3px);
+}
+
+/**/
+
+.critica__titulo{
+   font-size: 40px;
+   text-align: center;
+}
+
+.critica__contenedor{
+   display: flex;
+   justify-content: space-around;
+}
+
+.critica__subtitulo{
+   font-size: 22px;
+}
+
+.critica__puntaje--texto{
+   font-size: 30px;
+}
+
+.critica__texto{
+   font-size: 20px;
+   padding-right: 1.4em;
+   padding-left: 1.4em;
+}
+
+.critica__seccion{
+   width: 28%;
+   background-color: #061D2E;
+   color: white;
+   border-radius: 5%;
+   padding-bottom: 2em;
+}
+
+.critica__seccion:hover{
+   transition: all .4s ease-in-out;
+   transform:scale(1.1);
+   border: 2px solid black;
+   background-color: white;
+   color: black;
+}
+
+.critica__seccion:hover .critica__puntaje--texto{
+   transition: all .4s ease-in-out;
+   background-color: black;
+   color: white;
+}
+
+.critica__encabezado{
+   display: flex;
+   margin-left: 2em;
+   margin-right: 3.5em;
+   justify-content: space-between;
+}
+
+.critica__puntaje--texto{
+   background-color: white;
+   color: black;
+   border-radius: 70%;
+   padding: 0.4em;
+   font-weight: bolder;
+}
+
+.critica__seccion--gamespy{
+   background-color: black;
+}
+
+.redes__titulo{
+   text-align: center;
+   margin-top: 3.3em;
+   margin-bottom: 2.5em;
+   font-size: 34px;
+}
+
+.redes__imagenes{
+   display: flex;
+   justify-content: space-evenly;
+   margin-bottom: 7em;
+}
+
+.redes__imagenes img{
+   width: 13em;
+   height: 13em;
+}
+
+.footer{
+   height: 12em;
+   background-color: black;
+   color: white;
+   width: 100%;
+   text-align: center;
+}
+
+.footer p{
+   padding-top: 1.5em;
+   font-size: 23px;
+}
+
+@media (max-width:380px){
+   .nav__logo--movil{
+      display: inline-block;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      margin-left: 30%;
+   }
+
+   .nav__logo--hamb>.fa-bars{
+      display: inline-block;
+      margin: 18px;
+      font-size: 35px;
+   }
+
+   .nav__logo--hamb>.fa-bars i{
+      padding-right: 500px;
+   }
+
+   .banner__imagen{
+      display: none;
+   }
+
+   .banner__imagen--movil{
+      display: inline;
+      width: 100%;
+   }
+
+   .banner__titulo{
+      font-size: 28px;
+   }
+
+   .banner__texto{
+      font-size: 22px;
+   }
+
+   .nav__logo{
+      display: none;
+   }
+
+   .nav__opciones{
+      display: none;
+   }
+
+   .barra{
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .historia__seccion{
+      width: 100%;
+   }
+
+   .historia__contenedor{
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .historia__titulo{
+      font-size: 25px;
+      text-align: center;
+      width: 100%;
+   }
+
+   .historia__degradado{
+      height: 6%;
+   }
+
+   .historia__texto{
+      font-size: 22px;
+      margin-left: 5%;
+      margin-right: 5%;
+   }
+
+   .historia__icono{
+      width: 140px;
+      height: 140px;
+   }
+
+   .mosaico__cont1{
+      flex-direction: column;
+   }
+
+   .politica__titulo{
+      position: static;
+      font-size: 25px;
+      margin-top: 7%;
+      margin: 0;
+   }
+
+   .politica__texto{
+      position: static;
+      margin-left: 5%;
+      font-size: 19px;
+      top: 0;
+   }
+
+   .politica__info{
+      width: 100%;
+   }
+
+   .vinculos__titulo{
+      position: static;
+      margin-top: 7%;
+      font-size: 25px;
+      margin: 0;
+   }
+
+   .vinculos__texto{
+      position: static;
+      margin-left: 5%;
+      font-size: 18.3px;
+      top: 0;
+   }
+
+   .vinculos__info{
+      width: 100%;
+      font-size: 15px;
+   }
+
+   .habitantes__titulo{
+      position: static;
+      font-size: 25px;
+      margin-top: 7%;
+      margin: 0;
+   }
+
+   .habitantes__texto{
+      position: static;
+      margin-left: 5%;
+      font-size: 19px;
+      top: 0;
+   }
+
+   .habitantes__info{
+      width: 100%;
+   }
+   
+   .power__titulo{
+      position: static;
+      font-size: 25px;
+      margin-top: 7%;
+      margin: 0;
+   }
+
+   .power__texto{
+      position: static;
+      margin-left: 5%;
+      font-size: 19px;
+      top: 0;
+   }
+
+   .power__info{
+      width: 100%;
+   }
+
+   .estetica__titulo{
+      position: static;
+      font-size: 25px;
+      margin-top: 7%;
+      margin: 0;
+   }
+
+   .estetica__texto{
+      position: static;
+      margin-left: 5%;
+      font-size: 17px;
+      top: 0;
+   }
+
+   .estetica__info{
+      width: 100%;
+   }
+
+   .critica__titulo{
+      font-size: 25px;
+   }
+
+   .critica__contenedor{
+      flex-direction: column;
+   }
+
+   .critica__seccion{
+      border-radius: 0;
+      width: 100%;
+      pointer-events: none;
+   }
+
+   .redes__titulo{
+      font-size: 25px;
+   }
+
+   .redes__imagenes{
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+   }
+
+   .redes__instagram{
+      grid-row: 1;
+      grid-column: 1;
+      justify-self: center;
+   }
+
+   .redes__facebook{
+      grid-row: 1;
+      grid-column: 2;
+      justify-self: center;
+   }
+
+   .redes__twitter{
+      grid-row: 2;
+      grid-column: span 2;
+      justify-self: center;
+   }
+
+   .redes__imagenes img{
+      width: 120px;
+      height: 120px;
+   }
+
+   .footer p{
+      margin-left: 5%;
+      margin-right: 5%;
+      font-size: 22px;
+   }
+
+   .nav__opciones{
+      position: absolute;
+      top: 3.75em;
+      left: -100%;
+      width: 100%;
+      height: calc(100vh - 60px);
+      background: blue;
+   }   
+}

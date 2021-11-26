@@ -152,17 +152,24 @@ p{
 
 .mosaico__cont1{
    display: flex;
+   width: 100%;
+}
+
+.mosaico__cont2{
+   width: 100%;
 }
 
 .mosaico__cont1--seccion1{
    display: flex;
    flex-direction: column;
    margin-right: 5px;
+   width: 100%;
 }
 
 .mosaico__cont1--seccion2{
    display: flex;
    flex-direction: column;
+   width: 100%;
 }
 
 /* Hover Politica */
@@ -360,10 +367,12 @@ p{
 
 .mosaico__imagen--power{
    width: 100%;
+   height: 100%;
 }
 
 .power__cont{
    position: relative;
+   width: 100%;
 }
 
 .power__info{

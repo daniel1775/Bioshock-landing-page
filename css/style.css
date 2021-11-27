@@ -836,6 +836,11 @@ p{
       font-size: 25px;
    }
 
+   .mosaico__titulo{
+      font-size: 25px;
+      margin-top: 3em;
+   }
+
    .critica__contenedor{
       flex-direction: column;
    }
@@ -857,19 +862,19 @@ p{
       justify-content: center;
    }
 
-   .redes__instagram{
+   .redes__boton--instagram{
       grid-row: 1;
       grid-column: 1;
       justify-self: center;
    }
 
-   .redes__facebook{
+   .redes__boton--facebook{
       grid-row: 1;
       grid-column: 2;
       justify-self: center;
    }
 
-   .redes__twitter{
+   .redes__boton--twitter{
       grid-row: 2;
       grid-column: span 2;
       justify-self: center;

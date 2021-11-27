@@ -650,7 +650,7 @@ p{
    }
 }
 
-@media (max-width:380px){
+@media (max-width:450px){
    .nav__logo--movil{
       display: inline-block;
       margin-top: 3%;

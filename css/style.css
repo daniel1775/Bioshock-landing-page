@@ -11,10 +11,12 @@ body{
 h1, h2, h3, h4{
    font-weight: normal;
    font-family: 'Reem Kufi', sans-serif;
+   cursor: default;
 }
 
 p{
    font-family: 'Roboto', sans-serif;
+   cursor: default;
 }
 
 .nav{
@@ -129,8 +131,14 @@ p{
 }
 
 .historia__icono{
+   transition: all .4s ease-in-out;
    width: 150px;
    height: 150px;
+}
+
+.historia__icono:hover{
+   transition: all .4s ease-in-out;
+   transform:scale(1.1);
 }
 
 .historia__titulo{
@@ -527,6 +535,7 @@ p{
    color: white;
    border-radius: 5%;
    padding-bottom: 2em;
+   transition:all .5s ease-in-out;
 }
 
 .critica__seccion:hover{
@@ -576,8 +585,14 @@ p{
 }
 
 .redes__imagenes img{
+   transition: all .3s ease-in-out;
    width: 13em;
    height: 13em;
+}
+
+.redes__imagenes img:hover{
+   transition: all .4s ease-in-out;
+   transform:scale(1.1);
 }
 
 .footer{
@@ -591,6 +606,48 @@ p{
 .footer p{
    padding-top: 1.5em;
    font-size: 23px;
+}
+
+@media  (min-width:1700px) {
+   .habitantes__texto{
+      top: 3.7em;
+   }
+
+   .politica__texto{
+      top: 3.7em;
+   }
+
+   .power__texto{
+      top: 3.7em;
+   }
+
+   .vinculos__texto{
+      top: 3.7em;
+   }
+
+   .estetica__titulo{
+      top: 4.3em;
+   }
+
+   .estetica__texto{
+      top: 9.5em;
+   }
+
+   .critica__seccion{
+      width: 23%;
+   }
+
+   .critica__texto{
+      font-size: 25px;
+   }
+
+   .critica__puntaje--texto{
+      font-size: 35px;
+   }
+
+   .critica__subtitulo{
+      align-self: center;
+   }
 }
 
 @media (max-width:380px){

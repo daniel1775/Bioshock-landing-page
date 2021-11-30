@@ -4,6 +4,7 @@ let btn_menu = document.querySelector("#btn-menu");
 let enlaces = document.querySelectorAll('.nav__opciones li a');
 let prevScrollPos = window.pageYOffset;
 let containerMenu = document.querySelector('.nav');
+let body = document.body;
 
 // Mantener item activo
 enlaces.forEach((element) => {
@@ -24,8 +25,10 @@ enlaces.forEach((element) => {
 btn_menu.addEventListener('change', (evento) => {
     if(btn_menu.checked){
         menu.style.transform = "translateX(0%)";
+        body.style.overflowY = 'hidden';
     }else{
         menu.style.transform = "translateX(-100%)";
+        body.style.overflowY = 'scroll';
     }
 });
 

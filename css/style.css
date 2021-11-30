@@ -665,13 +665,19 @@ p{
 
 @media (max-width:450px){
    /* Menu desplegable */
+   .nav{
+      height: 11vh;
+   }
+
    .nav__opciones{
       flex-direction: column;
       position: absolute;
-      top: 77%;
+      justify-content: space-evenly;
+      padding-left: 9vw;
+      top: 8.2vh;
       left: 0;
       width: 100%;
-      height: 80vh;
+      height: 89vh;
       transform: translateX(-100%);
       transition: all 0.4s;
       border-top: 2px solid black;
@@ -687,17 +693,17 @@ p{
       display: inline-block;
       margin-top: 3%;
       margin-bottom: 3%;
-      margin-left: 30%;
+      margin-left: 28%;
+   }
+
+   .nav__logo--hamb{
+      align-self: center;
    }
 
    .nav__logo--hamb>.fa-bars{
       display: inline-block;
       margin: 18px;
       font-size: 35px;
-   }
-
-   .nav__logo--hamb>.fa-bars i{
-      padding-right: 500px;
    }
 
    .banner__imagen{

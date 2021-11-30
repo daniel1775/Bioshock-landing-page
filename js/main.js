@@ -17,6 +17,7 @@ enlaces.forEach((element) => {
 let prevScrollPos = window.pageYOffset;
 let containerMenu = document.querySelector('.nav');
 
+
 window.onscroll = () => {
     let currentScrollPos = window.pageYOffset;
 

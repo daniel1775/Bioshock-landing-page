@@ -1,10 +1,17 @@
+var mediaqueryList = window.matchMedia("(max-width: 450px)");
+let menu = document.querySelector(".nav__opciones");
+let btn_menu = document.querySelector("#btn-menu");
+let enlaces = document.querySelectorAll('.nav__opciones li a');
+let prevScrollPos = window.pageYOffset;
+let containerMenu = document.querySelector('.nav');
 
 // Mantener item activo
-let enlaces = document.querySelectorAll('.nav__opciones li a');
 enlaces.forEach((element) => {
-
     element.addEventListener('click', (evento) => {
-
+        if(mediaqueryList.matches){
+            menu.style.transform = "translateX(-100%)";
+            btn_menu.click();
+        }
         enlaces.forEach((link) => {
             link.classList.remove('nav__activo');
         });
@@ -13,11 +20,16 @@ enlaces.forEach((element) => {
     });
 });
 
+// Efecto despliegue
+btn_menu.addEventListener('change', (evento) => {
+    if(btn_menu.checked){
+        menu.style.transform = "translateX(0%)";
+    }else{
+        menu.style.transform = "translateX(-100%)";
+    }
+});
+
 // Esconder barra de menu
-let prevScrollPos = window.pageYOffset;
-let containerMenu = document.querySelector('.nav');
-
-
 window.onscroll = () => {
     let currentScrollPos = window.pageYOffset;
 
@@ -38,6 +50,6 @@ window.onscroll = () => {
         containerMenu.style.borderBottom = "none";
 
     } else {
-        containerMenu.style.borderBottom = "solid 5px #0A76A5";
+        containerMenu.style.borderBottom = "solid 2px #000000";
     }
 }

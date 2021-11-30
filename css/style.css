@@ -19,6 +19,10 @@ p{
    cursor: default;
 }
 
+#btn-menu{
+   display: none;
+}
+
 .nav{
    display: flex;
    justify-content: space-between;
@@ -660,6 +664,25 @@ p{
 }
 
 @media (max-width:450px){
+   /* Menu desplegable */
+   .nav__opciones{
+      flex-direction: column;
+      position: absolute;
+      top: 77%;
+      left: 0;
+      width: 100%;
+      height: 80vh;
+      transform: translateX(-100%);
+      transition: all 0.4s;
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      background-color: white;
+   }
+
+   .nav__logo{
+      display: none;
+   }
+
    .nav__logo--movil{
       display: inline-block;
       margin-top: 3%;
@@ -692,19 +715,6 @@ p{
 
    .banner__texto{
       font-size: 22px;
-   }
-
-   .nav__logo{
-      display: none;
-   }
-
-   .nav__opciones{
-      display: none;
-   }
-
-   .barra{
-      display: flex;
-      justify-content: space-between;
    }
 
    .historia__seccion{
@@ -890,13 +900,4 @@ p{
       margin-right: 5%;
       font-size: 22px;
    }
-
-   .nav__opciones{
-      position: absolute;
-      top: 3.75em;
-      left: -100%;
-      width: 100%;
-      height: calc(100vh - 60px);
-      background: blue;
-   }   
 }

@@ -14,7 +14,7 @@ _To run project just need to have any browser_
 
 _Open the index.html file with you prefer browser_
 
-## Built in
+## Built in 🛠️
 
 _HTML5, CSS3, JavaScript_
 

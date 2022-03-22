@@ -17,7 +17,6 @@ enlaces.forEach((element) => {
             link.classList.remove('nav__activo');
         });
         evento.target.classList.add('nav__activo');
-
     });
 });
 
@@ -49,7 +48,7 @@ window.onscroll = () => {
 
     // Mostrar y ocultar scroll Estilos
     let arriba = window.pageYOffset;
-    if (arriba <= 600) {
+    if (arriba <= 650) {
         containerMenu.style.borderBottom = "none";
 
     } else {
